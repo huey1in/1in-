@@ -1,10 +1,10 @@
 ## 1in视频解析小程序
 
 ### 目录结构
-- `pages/index/`：输入分享链接，发起解析。
-- `pages/result/`：展示解析结果，播放视频或保存封面。
-- `components/top-bar/`：顶部栏组件（标题/颜色/可选返回）。
-- `app.json`：全局配置，`navigationStyle` 已设为 `custom`。
+- `pages/index/`：输入分享链接，发起解析
+- `pages/result/`：展示解析结果，播放视频或保存封面
+- `components/top-bar/`：顶部栏组件
+- `app.json`：全局配置，`navigationStyle` 已设为 `custom`
 
 ### 预览效果图
 <span><img src="./public/p1.png" alt="index" width="300"></span>
@@ -12,7 +12,7 @@
 
 
 ### 二次开发须知
-- 保留并标注原作者信息（如在 README 或关于页注明“原作者：本项目作者”）。
+- 保留并标注原作者信息（如在 README 或关于页注明“原作者：1in”）。
 - 扩展平台解析时，在 `pages/index/index.js` 的 `extractShareUrl` 中补充正则。
 - 调整导航样式可修改 `components/top-bar`。
 
