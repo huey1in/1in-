@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="page">
+  <top-bar title="视频解析" />
+  <scroll-view class="scrollarea" scroll-y type="list">
+    <view class="container">
+      <!-- 输入区域 -->
+      <view class="input-section">
+        <view class="input-title">粘贴分享链接</view>
+        <textarea 
+          class="input-area" 
+          placeholder="请粘贴视频分享链接，例如：https://v.douyin.com/xxxxxxx"
+          value="{{shareUrl}}"
+          bindinput="onUrlInput"
+          maxlength="500"
+        />
+        <view class="button-group">
+          <button class="paste-btn" bindtap="pasteFromClipboard">粘贴</button>
+          <button class="parse-btn" bindtap="parseVideo" disabled="{{loading}}">
+            {{loading ? '解析中...' : '开始解析'}}
+          </button>
+        </view>
+      </view>
+
+      <!-- 错误提示 -->
+      <view class="error-section" wx:if="{{errorMsg}}">
+        <text class="error-text">{{errorMsg}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

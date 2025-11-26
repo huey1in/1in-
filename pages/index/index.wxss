@@ -1,0 +1,102 @@
+/**index.wxss**/
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.container {
+  padding: 20rpx;
+}
+
+/* 输入区域 */
+.input-section {
+  background: white;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: -400rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.input-area {
+  width: 100%;
+  min-height: 160rpx;
+  background: #f8f8f8;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  box-sizing: border-box;
+  border: 2rpx solid #f0f0f0;
+  margin-bottom: 15rpx;
+}
+
+.button-group {
+  display: flex;
+  gap: 12rpx;
+}
+
+.paste-btn {
+  width: 72rpx;
+  height: 72rpx;
+  background: #f0f0f0;
+  color: #333;
+  border-radius: 12rpx;
+  border: none;
+  font-size: 26rpx;
+  font-weight: bold;
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parse-btn {
+  flex: 1;
+  height: 72rpx;
+  background: #333;
+  color: white;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.15);
+}
+
+.parse-btn[disabled] {
+  opacity: 0.6;
+}
+
+/* 错误提示 */
+.error-section {
+  background: #fff3f3;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-top: 20rpx;
+  border-left: 4rpx solid #ff4444;
+}
+
+.error-text {
+  color: #ff4444;
+  font-size: 28rpx;
+  text-align: center;
+  display: block;
+}

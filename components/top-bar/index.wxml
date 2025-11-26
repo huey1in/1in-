@@ -1,0 +1,12 @@
+<view
+  class="top-bar"
+  style="background: {{background}}; color: {{color}}; padding-top: {{statusBarHeight}}px;"
+>
+  <view class="bar-inner">
+    <view class="back-area" wx:if="{{showBack}}" bindtap="onBackTap">
+      <view class="back-icon"></view>
+      <text class="back-text">返回</text>
+    </view>
+    <text class="title">{{title}}</text>
+  </view>
+</view>

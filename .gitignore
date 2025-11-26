@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+miniprogram_npm/
+
+# Build output & caches
+dist/
+build/
+debug/
+coverage/
+temp/
+tmp/
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# IDE/editor
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

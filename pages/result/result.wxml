@@ -1,0 +1,70 @@
+<!--result.wxml-->
+<view class="page">
+  <top-bar title="解析结果" showBack="{{true}}" />
+  <scroll-view class="scrollarea" scroll-y type="list">
+    <view class="container">
+      <view class="video-block" wx:if="{{isVideo}}">
+        <view class="video-cover" bindtap="playVideo">
+          <image src="{{videoData.cover_url}}" mode="aspectFill" />
+          <view class="play-btn-icon"></view>
+        </view>
+
+        <view class="video-info">
+          <view class="video-title">{{videoData.title}}</view>
+          <view class="author-section">
+            <image class="author-avatar" src="{{videoData.author.avatar}}" />
+            <view class="author-info">
+              <text class="author-name">{{videoData.author.name}}</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="action-row">
+          <button class="action-btn primary" bindtap="downloadVideo">
+            <text class="btn-text">下载视频</text>
+          </button>
+          <button class="action-btn secondary" bindtap="saveCover">
+            <text class="btn-text">保存封面</text>
+          </button>
+        </view>
+      </view>
+
+      <view class="video-block" wx:else>
+        <view class="video-cover" bindtap="previewImage" data-index="0">
+          <image src="{{videoData.images && videoData.images.length > 0 ? videoData.images[0] : videoData.cover_url}}" mode="aspectFill" />
+          <view class="play-btn-icon"></view>
+        </view>
+
+        <view class="video-info">
+          <view class="video-title">{{videoData.title}}</view>
+          <view class="author-section">
+            <image class="author-avatar" src="{{videoData.author.avatar}}" />
+            <view class="author-info">
+              <text class="author-name">{{videoData.author.name}}</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="action-row">
+          <button class="action-btn secondary" bindtap="saveCover" style="flex: 1;">
+            <text class="btn-text">保存封面</text>
+          </button>
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
+</view>
+
+<view class="fullscreen-video" wx:if="{{showVideoModal}}">
+  <video 
+    class="fullscreen-video-element"
+    src="{{videoData.video_url}}" 
+    controls 
+    autoplay
+    show-center-play-btn
+    enable-progress-gesture
+    object-fit="contain"
+  />
+  <view class="close-btn" bindtap="closeVideoModal">X</view>
+</view>

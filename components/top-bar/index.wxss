@@ -1,0 +1,47 @@
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bar-inner {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+
+.back-area {
+  position: absolute;
+  left: 20rpx;
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+  padding: 10rpx 16rpx;
+  border-radius: 999rpx;
+  background: rgba(0, 0, 0, 0.05);
+  color: inherit;
+}
+
+.back-icon {
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 4rpx solid currentColor;
+  border-left: 4rpx solid currentColor;
+  transform: rotate(-45deg);
+}
+
+.back-text {
+  font-size: 26rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: inherit;
+}
