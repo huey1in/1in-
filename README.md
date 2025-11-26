@@ -4,7 +4,7 @@
 - `pages/index/`：输入分享链接，发起解析
 - `pages/result/`：展示解析结果，播放视频或保存封面
 - `components/top-bar/`：顶部栏组件
-- `app.json`：全局配置，`navigationStyle` 已设为 `custom`
+- `app.json`：全局配置
 
 ### 预览效果图
 <span><img src="./public/p1.png" alt="index" width="300"></span>
